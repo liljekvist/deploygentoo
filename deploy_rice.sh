@@ -147,27 +147,11 @@ else
 	echo "cloning slstatus from github"
     git clone https://github.com/MentalOutlaw/slstatus
 fi
-check_dir_exists $HOME/.config/dwm
-if $exists; then
-	printf "dwm folder exists already"
-else
-	echo "cloning dwm from github"
-    git clone https://github.com/MentalOutlaw/dwm
-fi
-check_dir_exists $HOME/.config/dmenu
-if $exists; then
-	printf "dmenu folder exists already"
-else
-	echo "cloning dmenu from github"
-    git clone https://github.com/MentalOutlaw/dmenu
-fi
 
-cd $HOME/.config/dwm
-make clean install
-echo "installed dwm"
-cd $HOME/.config/dmenu
-make clean install
-echo "installed dmenu"
+echo "Installing XFCE4"
+emerge xfce-base/xfce4-meta
+
+
 cd $HOME/.config/slstatus
 make clean install
 echo "installed slstatus"
