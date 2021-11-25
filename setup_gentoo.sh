@@ -36,9 +36,9 @@ while true; do
             parted $disk_chk --script set 1 bios_grub on
             parted $disk_chk --script mkpart primary 3MiB 131MiB
             parted $disk_chk --script name 2 boot
-            parted $disk_chk --script mkpart primary 131MiB 4227MiB
+            parted $disk_chk --script mkpart primary 131MiB 8195MiB
             parted $disk_chk --script name 3 swap
-            parted $disk_chk --script -- mkpart primary 4227MiB -1
+            parted $disk_chk --script -- mkpart primary 8195MiB -1
             parted $disk_chk --script name 4 rootfs
             parted $disk_chk --script set 2 boot on
             part_1=("${disk_chk}1")
