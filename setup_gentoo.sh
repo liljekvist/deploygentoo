@@ -148,7 +148,7 @@ performance_opts="${performance_opts,,}"
 printf ${LIGHTGREEN}"Beginning installation, this will take several minutes\n"
 
 #copying files into place
-mount $part_4 /mnt/gentoo
+mount /dev/nvme0n1p4 /mnt/gentoo
 mv deploygentoo-master /mnt/gentoo
 mv deploygentoo-master.zip /mnt/gentoo/
 mv network_devices /mnt/gentoo/deploygentoo-master/
